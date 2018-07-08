@@ -4,9 +4,9 @@
 	<div class="container">
 		<a class="navbar-brand">Angular Router</a>
 		<ul class="nav navbar-nav" routerLinkActive="active">
-			<li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
-			<li class="nav-item"><a class="nav-link" routerLink="store">Store</a></li>
-			<li class="nav-item"><a class="nav-link" routerLink="about">About</a></li>
+			<li class="nav-item" *permissions="['all', 'home.manage']"><a class="nav-link" routerLink="home" routerLinkActive="active">Home</a></li>
+			<li class="nav-item" *permissions="['any', 'store.view']"><a class="nav-link" routerLink="store" routerLinkActive="active">Store</a></li>
+			<li class="nav-item" *permissions="['about.view']"><a class="nav-link" routerLink="about" routerLinkActive="active">About</a></li>
 		</ul>
 	</div>
 </nav>
