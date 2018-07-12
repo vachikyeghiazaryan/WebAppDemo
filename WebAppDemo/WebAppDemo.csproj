@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="src\app\core\models\store\RefCategoryEnum.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
     <Folder Include="src\app\core\pipes\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
@@ -20,6 +25,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\core\models\store\RefCategoryEnum.ts" />
   </ItemGroup>
 
 </Project>

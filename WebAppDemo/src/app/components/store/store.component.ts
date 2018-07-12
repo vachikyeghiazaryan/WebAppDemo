@@ -4,7 +4,7 @@ import { StoreProduct } from "../../core/models/store/StoreProduct";
 
 
 @Component({
-	selector: 'store',
+	selector: 'app-store',
 	templateUrl: 'store.component.html'
 })
 

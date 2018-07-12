@@ -19,6 +19,7 @@ namespace WebAppDemo.Controllers
 		[HttpGet]
 		public IEnumerable<StoreProduct> Products()
 		{
+			var rnd = new Random();
 			var storeProducts = new List<StoreProduct>();
 			for(int i = 1; i <= 10; i++)
 			{
@@ -27,7 +28,8 @@ namespace WebAppDemo.Controllers
 					Id = i,
 					Name = "Product " + i,
 					Description = "Product " + i + " description",
-					ImageUrl = "https://www.cornerstone-hw.com/wp-content/uploads/2018/02/example-1prdct1.png"
+					ImageUrl = "https://www.cornerstone-hw.com/wp-content/uploads/2018/02/example-1prdct1.png",
+					CategoryId = (RefCategoryEnum)rnd.Next(1, 3)
 				});
 			}
 			return storeProducts;

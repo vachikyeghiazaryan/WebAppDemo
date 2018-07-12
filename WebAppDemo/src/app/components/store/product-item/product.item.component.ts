@@ -1,9 +1,9 @@
 ﻿import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { StoreProduct } from "../../core/models/store/StoreProduct";
+import { StoreProduct } from "../../../core/models/store/StoreProduct";
 
 
 @Component({
-	selector: 'product-item',
+	selector: 'app-product-item',
 	templateUrl: 'product.item.component.html'
 })
 export class ProductItemComponent implements OnInit {

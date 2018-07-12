@@ -9,7 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { StoreComponent } from './components/store/store.component';
-import { ProductItemComponent } from './components/store/product.item.component';
+import { ProductItemComponent } from './components/store/product-item/product.item.component';
 
 import { routing } from './app.router';
 
@@ -20,6 +20,9 @@ import { AuthGuardService } from './core/services/auth/auth-guard.service';
 import { AuthService } from './core/services/auth/auth.service';
 import { UserService } from './core/services/user.service';
 import { PermissionsDirective } from './core/directives/permissions.directive';
+import { NavComponent } from './components/nav/nav.component';
+import { CategoryComponent } from './components/store/category/category.component';
+import { SidebarComponent } from './components/store/sidebar/sidebar.component';
 
 @NgModule({
     imports: [
@@ -42,8 +45,10 @@ import { PermissionsDirective } from './core/directives/permissions.directive';
 		HomeComponent,
 		StoreComponent,
 		ProductItemComponent,
+		CategoryComponent,
+		NavComponent,
+		SidebarComponent,
 		AppComponent,
-
 		PermissionsDirective,
 	],
 	providers: [

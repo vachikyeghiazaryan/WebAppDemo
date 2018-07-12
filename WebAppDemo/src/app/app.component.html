@@ -1,14 +1,22 @@
 <h1>Angular Router</h1>
 
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-	<div class="container">
-		<a class="navbar-brand">Angular Router</a>
-		<ul class="nav navbar-nav" routerLinkActive="active">
-			<li class="nav-item" *permissions="['all', 'home.manage']"><a class="nav-link" routerLink="home" routerLinkActive="active">Home</a></li>
-			<li class="nav-item" *permissions="['any', 'store.view']"><a class="nav-link" routerLink="store" routerLinkActive="active">Store</a></li>
-			<li class="nav-item" *permissions="['about.view']"><a class="nav-link" routerLink="about" routerLinkActive="active">About</a></li>
-		</ul>
-	</div>
-</nav>
+<div class="main-content-nav">
+	<app-nav></app-nav>
+</div>
+<div class="main-content-body">
+	<router-outlet></router-outlet>
+</div>
 
-<router-outlet></router-outlet>
+<style>
+	.main-content-nav {
+		/*display: inline-block;*/
+		width: 30%;
+		float: left;
+	}
+
+	.main-content-body {
+		/*display: inline-block;*/
+		width: 60%;
+		float: left;
+	}
+</style>
