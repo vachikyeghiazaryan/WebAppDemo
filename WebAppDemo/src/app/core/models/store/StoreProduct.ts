@@ -5,5 +5,5 @@ export class StoreProduct {
 	name: string;
 	description: string;
 	imageUrl: string;
-	categoryId: RefCategoryEnum;
+	refCategoryId: RefCategoryEnum;
 }

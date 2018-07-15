@@ -23,6 +23,8 @@ import { PermissionsDirective } from './core/directives/permissions.directive';
 import { NavComponent } from './components/nav/nav.component';
 import { CategoryComponent } from './components/store/category/category.component';
 import { SidebarComponent } from './components/store/sidebar/sidebar.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 @NgModule({
     imports: [
@@ -49,6 +51,10 @@ import { SidebarComponent } from './components/store/sidebar/sidebar.component';
 		NavComponent,
 		SidebarComponent,
 		AppComponent,
+
+		ProductComponent,
+		ProductUpdateComponent,
+
 		PermissionsDirective,
 	],
 	providers: [

@@ -1,7 +1,8 @@
 ﻿<main *permissions="['store.view', 'store.manage']">
 	<div class="container">
 		<div class="row row-offcanvas row-offcanvas-right left-side">
-			<div class="col-xs-12 col-sm-9">
+			<div class="col-xs-12 col-sm-9" [class.component-loading]="loading">
+				<div class="component-loading-inner"> loading... </div>
 				<!--<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
 					<li class="breadcrumb-item active">Store</li>
@@ -18,12 +19,10 @@
 
 
 				</div>
-
-				<router-outlet></router-outlet>
 			</div>
 		</div>
 		<div class="right-side">
-			<app-sidebar></app-sidebar>
+			<app-sidebar (selectedCategoryId)="onCategoryIdFilterChange($event)"></app-sidebar>
 		</div>
 	</div>
 </main>
@@ -35,5 +34,14 @@
 	}
 	.right-side {
 		float: right;
+	}
+	.component-loading > div {
+		display: none;
+	}
+	.component-loading .component-loading-inner {
+		display: block !important;
+	}
+	.component-loading-inner {
+		display: none;
 	}
 </style>

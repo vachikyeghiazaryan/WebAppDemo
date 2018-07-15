@@ -4,6 +4,7 @@
 		<ul class="nav navbar-nav" routerLinkActive="active">
 			<li class="nav-item" *permissions="['all', 'home.manage']"><a class="nav-link" routerLink="home" routerLinkActive="active">Home</a></li>
 			<li class="nav-item" *permissions="['any', 'store.view']"><a class="nav-link" routerLink="store" routerLinkActive="active">Store</a></li>
+			<li class="nav-item" *permissions="['any', 'products.view']"><a class="nav-link" routerLink="products" routerLinkActive="active">Products</a></li>
 			<li class="nav-item" *permissions="['about.view']"><a class="nav-link" routerLink="about" routerLinkActive="active">About</a></li>
 		</ul>
 	</div>

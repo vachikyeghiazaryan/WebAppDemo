@@ -4,6 +4,6 @@
 export class UserService {
 
 	GetUserPermissions(): string[] {
-		return ["home.manage", "store.view", "store.modify"];
+		return ["home.manage", "store.view", "store.modify", "products.view"];
 	}
 }

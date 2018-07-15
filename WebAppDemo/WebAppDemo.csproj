@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="src\app\core\models\IdNamePair.ts" />
     <None Remove="src\app\core\models\store\RefCategoryEnum.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="src\app\core\pipes\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
@@ -20,7 +20,9 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\core\models\IdNamePair.ts" />
     <TypeScriptCompile Include="src\app\core\models\store\RefCategoryEnum.ts" />
   </ItemGroup>
 

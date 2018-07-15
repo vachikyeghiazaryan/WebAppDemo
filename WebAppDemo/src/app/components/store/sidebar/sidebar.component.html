@@ -1,11 +1,16 @@
 ﻿<div style="border: 1px solid red">
 	<p>sidebar Component</p>
 	<div>
+		Categories
 		<ul>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
+			<li *ngFor="let item of categories" id="{{item.id}}" (click)="categoryChanged(item.id)" [ngClass]="{'active' : selCategoryId === item.id}">{{item.name}}</li>
 		</ul>
 	</div>
-	</div>
+</div>
+
+<style>
+	.active{
+		color: green;
+		border: 1px solid gray;
+	}
+</style>
